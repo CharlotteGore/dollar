@@ -1,0 +1,16 @@
+{
+  "name": "dollar",
+  "repo": "charlottegore/dollar",
+  "description": "A tiny component for basic DOM fiddling",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "manuelstofer/each": "*",
+    "component/classes": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
