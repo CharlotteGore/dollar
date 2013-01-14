@@ -2,11 +2,12 @@
   "name": "dollar",
   "repo": "charlottegore/dollar",
   "description": "A tiny component for basic DOM fiddling",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
     "manuelstofer/each": "*",
-    "component/classes": "*"
+    "component/classes": "*",
+    "component/event": "*"
   },
   "development": {},
   "license": "MIT",

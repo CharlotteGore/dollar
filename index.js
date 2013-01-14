@@ -1,5 +1,6 @@
 var each = require( 'each' );
 var classes = require( 'classes' );
+var events = require('event');
 
 var defaultDisplay = '';
 
@@ -166,6 +167,15 @@ Dollar.prototype = {
 		}
 
 		return this;
+
+	},
+	onClick : function( callback ){
+
+		events.bind(this[0], 'click', function( e ){
+
+			callback(e);
+
+		});
 
 	}
 
