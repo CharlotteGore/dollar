@@ -177,6 +177,8 @@ Dollar.prototype = {
 
 		});
 
+		return this;
+
 	}
 
 }
