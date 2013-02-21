@@ -1,8 +1,9 @@
 
 # dollar
 
-  A tiny utterly unfancy DOM manipulation thing for a project that can't use anything bigger.
-  Useful for building small DOM chunks, tweaking CSS, adding stuff into the head element, and adding Click handlers.
+  A tiny utterly unfancy but cross-browser compatible DOM manipulation thing for a project that can't use anything bigger.
+
+  Useful for building small DOM chunks, tweaking CSS, adding stuff into the head element, and adding Click handlers. Surprisingly seems to cover 80% of all the stuff I ever do, though.
 
   No CSS selector engine, but the methods are chainable. So that's nice.
 
@@ -41,6 +42,30 @@
     $().getById('someid') 
 
   Simple alias for `element.getElementById()`
+
+### .text()
+
+    dollarObject.text('show me the money');
+
+  This very handy method allows you to change the mystical text content of an element. This isn't a simple alias for 'innerText', you can't use it to create new elements from thin air, I'm afraid.
+
+### .append()
+
+    dollarObject.append( someOtherDollarObject );
+
+  Adds `someOtherDollarObject` as a child of `dollarObject`
+
+### .appendTo()
+
+    dollarObject.appendTo( someOtherDollarObject );
+
+  Adds `dollarObject` as a child of `someOtherDollarObject`
+
+### .onClick( `callback` )
+
+    dollarObject.onClick( function(e){ e.preventDefault(); console.log('clicked!'); } );
+
+  Binds a callback to be run when an element is clicked. `e.preventDefault()` works in IE here, thanks to some mickey mouse shimming.
 
 ### .attr( `attribute`, `value` )
 
