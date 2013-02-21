@@ -30,13 +30,20 @@ Dollar.prototype = {
 	getById : function( id ){
 
 		this[ 0 ] = document.getElementById( id );
-		this.length = 1;
+
+		if(this[0]){
+			this.length = 1;
+
+		}
 		return this;
 
 	},
 	getHead : function(){
 
 		this[ 0 ] = document.getElementsByTagName( 'head' )[ 0 ];
+		if(this[0]){
+			this.length = 1;
+		}
 
 		return this;
 
@@ -44,7 +51,9 @@ Dollar.prototype = {
 	getBody : function(){
 
 		this[ 0 ] = document.getElementsByTagName( 'body' )[ 0 ];
-
+		if(this[0]){
+			this.length = 1;
+		}
 		return this;
 
 	},
