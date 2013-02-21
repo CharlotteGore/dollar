@@ -123,8 +123,87 @@ describe('dollar module', function(){
 
 			div[0].innerHTML.should.equal('text node');
 
+		});	
+
+		it('should be able to set an attribute', function(){
+
+			var div = dollar().create('div');
+
+			div.attr('id', 'test');
+
+			div[0].getAttribute('id').should.equal('test');
+
+		});
+
+		it('should be able to set a css property', function(){
+
+			var div = dollar().create('div');
+			div.css({ width: 100 });
+
+			div[0].style.width.should.equal('100px');
+
+		});
+
+		it('should be able to add a css class', function(){
+
+			var div = dollar().create('div');
+			div.addClass('test')
+			div[0].className.should.equal('test');
 		});		
 
-	})
+		it('should be able to remove a css class', function(){
+
+			var div = dollar().create('div');
+			div.addClass('test')
+			div[0].className.should.equal('test');
+			div.removeClass('test')
+			div[0].className.should.equal('');
+		});		
+
+		it('should be able to toggle a class', function(){
+
+			var div = dollar().create('div');
+			div.addClass('test');
+			div[0].className.should.equal('test');
+
+
+			div.toggleClass('test')
+			div[0].className.should.equal('');
+
+			div.toggleClass('test')
+			div[0].className.should.equal('test');
+
+			div.toggleClass('test')
+			div[0].className.should.equal('');
+		});		
+
+
+	});
+
+	describe('element appending drivel', function(){
+
+		it('should allow an element to be appended as a child', function(){
+
+			var div = dollar().create('div');
+			var span = dollar().create('span');
+
+			div.append(span);
+
+			div[0].childNodes[0].should.equal(span[0]);
+
+		})
+
+		it('should allow an element to append itself to another', function(){
+
+			var div = dollar().create('div');
+			var span = dollar().create('span');
+
+			span.appendTo(div);
+
+			div[0].childNodes[0].should.equal(span[0]);		
+
+		})
+
+	});
 
 });
