@@ -18,9 +18,19 @@
 
     var dollarObject = $( element );
 
-  ...otherwise use `.getById()`
+  ...otherwise use 
 
- ### .create( `tagName` )
+    var dollarObject = $();
+
+    dollarObject.create('div');
+
+  or 
+
+    dollarObject.getById('someid');
+
+  that's the sort of epic level this is working on.
+
+### .create( `tagName` )
 
     var anchor = $().create('a'); 
 
