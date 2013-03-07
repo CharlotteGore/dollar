@@ -1,6 +1,7 @@
 var each = require( 'each' );
 var classes = require( 'classes' );
 var events = require('event');
+var measure = require('measure');
 
 var defaultDisplay = '';
 
@@ -187,6 +188,44 @@ Dollar.prototype = {
 		});
 
 		return this;
+
+	},
+
+	boxDetails : function(){
+
+		var m = measure( this[0] );
+
+		return measure.boxDetails();
+	},
+
+	pagePosition: function(){
+
+		var m = measure( this[0] );
+		return measure.pagePosition();
+
+	},
+
+	innerPosition : function(){
+
+		var m = measure( this[0] );
+
+		return measure.innerPosition(); 
+
+	},
+
+	innerSize : function(){
+
+		var m = measure( this[0]);
+
+		return measure.innerSize();
+
+	},
+
+	outerSize : function(){
+
+		var m = measure( this[0] );
+
+		return measure.outerSize();
 
 	}
 
