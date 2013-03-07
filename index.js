@@ -195,13 +195,13 @@ Dollar.prototype = {
 
 		var m = measure( this[0] );
 
-		return measure.boxDetails();
+		return m.boxDetails();
 	},
 
 	pagePosition: function(){
 
 		var m = measure( this[0] );
-		return measure.pagePosition();
+		return m.pagePosition();
 
 	},
 
@@ -209,7 +209,7 @@ Dollar.prototype = {
 
 		var m = measure( this[0] );
 
-		return measure.innerPosition(); 
+		return m.innerPosition(); 
 
 	},
 
@@ -217,7 +217,7 @@ Dollar.prototype = {
 
 		var m = measure( this[0]);
 
-		return measure.innerSize();
+		return m.innerSize();
 
 	},
 
@@ -225,7 +225,7 @@ Dollar.prototype = {
 
 		var m = measure( this[0] );
 
-		return measure.outerSize();
+		return m.outerSize();
 
 	}
 
