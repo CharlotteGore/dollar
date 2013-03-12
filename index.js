@@ -183,7 +183,25 @@ Dollar.prototype = {
 
 		events.bind(this[0], 'click', function( e ){
 
+			var preventDefault = false;
+
+			if(!e.preventDefault){
+
+				e.preventDefault = function(){
+
+					preventDefault = true;
+
+				}
+
+			}
+
 			callback(e);
+
+			if(preventDefault){
+
+				return false;
+
+			}
 
 		});
 
