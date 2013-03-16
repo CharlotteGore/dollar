@@ -208,42 +208,40 @@ Dollar.prototype = {
 		return this;
 
 	},
+	bind : function( event, callback ){
 
-	boxDetails : function(){
+		events.bind(this[0], event, function(e){
 
-		var m = measure( this[0] );
+			var preventDefault = false;
 
-		return m.boxDetails();
+			if(!e.preventDefault){
+
+				e.preventDefault = function(){
+
+					preventDefault = true;
+
+				}
+
+			}
+
+			callback(e);
+
+			if(preventDefault){
+
+				return false;
+
+			}
+
+		});
+
+		return this;
+
 	},
+	unbind : function( event, callback ){
 
-	pagePosition: function(){
+		events.unbind(this[0], event, callback );
 
-		var m = measure( this[0] );
-		return m.pagePosition();
-
-	},
-
-	innerPosition : function(){
-
-		var m = measure( this[0] );
-
-		return m.innerPosition(); 
-
-	},
-
-	innerSize : function(){
-
-		var m = measure( this[0]);
-
-		return m.innerSize();
-
-	},
-
-	outerSize : function(){
-
-		var m = measure( this[0] );
-
-		return m.outerSize();
+		return this;
 
 	}
 

@@ -7,8 +7,7 @@
   "dependencies": {
     "manuelstofer/each": "*",
     "component/classes": "*",
-    "component/event": "*",
-    "charlottegore/measure" : "*"
+    "component/event": "*"
   },
   "development": {},
   "license": "MIT",
