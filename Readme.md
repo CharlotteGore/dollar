@@ -1,4 +1,3 @@
-
 # dollar
 
   A tiny utterly unfancy but cross-browser compatible DOM manipulation thing for a project that can't use anything bigger.
@@ -66,6 +65,14 @@
     dollarObject.onClick( function(e){ e.preventDefault(); console.log('clicked!'); } );
 
   Binds a callback to be run when an element is clicked. `e.preventDefault()` works in IE here, thanks to some mickey mouse shimming.
+
+### .bind( event, callback )
+
+  Bind an event handler for a particular type of event
+  
+### .unbind( event, callback )
+
+  Unbind an event handler for a particular type of event.
 
 ### .attr( `attribute`, `value` )
 
