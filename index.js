@@ -1,7 +1,6 @@
 var each = require( 'each' );
 var classes = require( 'classes' );
 var events = require('event');
-var measure = require('measure');
 
 var defaultDisplay = '';
 
